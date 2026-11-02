@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nsoulad"
+version = "1.0.0"
+description = "Auditing Temporal Leakage and Rule Reliance in Early Warning of Students at Risk"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.3",
+    "xgboost>=2.0",
+    "torch>=2.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+# Baseline XAI (lazy-imported) untuk scripts/run_shap.py & run_counterfactual.py.
+xai = ["shap>=0.44", "dice-ml>=0.11"]
+analysis = ["scipy>=1.11", "pyarrow>=14", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

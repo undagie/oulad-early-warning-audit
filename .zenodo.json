@@ -1,0 +1,35 @@
+{
+  "title": "Auditing Temporal Leakage and Rule Reliance in Early Warning of Students at Risk",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Muin, Agus Alim",
+      "affiliation": "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+    },
+    {
+      "name": "Muflih, M.",
+      "affiliation": "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+    },
+    {
+      "name": "Ratna, Silvia",
+      "affiliation": "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+    },
+    {
+      "name": "Rosadi, Muhammad Edya",
+      "affiliation": "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+    },
+    {
+      "name": "Dewi, Deshinta Arrova",
+      "affiliation": "Faculty of Data Science and Information Technology, INTI International University"
+    }
+  ],
+  "keywords": [
+    "learning analytics",
+    "early warning system",
+    "data leakage",
+    "neurosymbolic AI",
+    "OULAD"
+  ],
+  "description": "Code for a cutoff-first early-warning benchmark on OULAD with temporal-leakage, neural-symbolic reliance, and rule-based alert audits."
+}

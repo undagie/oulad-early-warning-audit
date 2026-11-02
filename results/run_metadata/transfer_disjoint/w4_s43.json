@@ -1,0 +1,223 @@
+{
+ "condition": {
+  "name": "transfer_disjoint",
+  "leaky": false,
+  "score_lag_days": 0,
+  "fixed_cohort_weeks": null,
+  "include_withdrawn": false,
+  "split": "presentation_disjoint",
+  "module": null
+ },
+ "window": 4,
+ "seed": 43,
+ "n_train": 10040,
+ "n_val": 1766,
+ "n_test": 14137,
+ "base_rate_test": 0.4213765296739054,
+ "selected": {
+  "xgboost": {
+   "max_depth": 4,
+   "learning_rate": 0.05
+  },
+  "static": {
+   "max_depth": 4,
+   "learning_rate": 0.03
+  },
+  "gru": {
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005
+  }
+ },
+ "fusion_coef": {
+  "full": {
+   "intercept": -2.2133767575380983,
+   "P_neural": 4.315997503644676,
+   "P_symbolic": 0.000979116790425756,
+   "rule_count": 0.07704618705632653,
+   "high_severity_count": -0.04269604194364961
+  },
+  "compact": {
+   "intercept": -0.03000141831789236,
+   "P_neural": 1.1703598457519104,
+   "P_symbolic": 0.022464256737425616
+  }
+ },
+ "tuning_log": [
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.7561969300808383,
+   "seconds": 1.02
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.757090724308078,
+   "seconds": 0.96
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.7531030131637524,
+   "seconds": 1.0
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.7555643415201164,
+   "seconds": 1.27
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.7542426653758051,
+   "seconds": 1.21
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.749248650286193,
+   "seconds": 1.25
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.7562114675023088,
+   "seconds": 1.66
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.75268477118096,
+   "seconds": 1.43
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.7430875171302158,
+   "seconds": 1.63
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6178880941302689,
+   "seconds": 0.27
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.6148169989039657,
+   "seconds": 0.27
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.6037382327163318,
+   "seconds": 0.29
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6136329408593209,
+   "seconds": 0.34
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.609979477776734,
+   "seconds": 0.35
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.592590304943201,
+   "seconds": 0.36
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6089039120741992,
+   "seconds": 0.39
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.6040251657442195,
+   "seconds": 0.47
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.586406791925372,
+   "seconds": 0.63
+  },
+  {
+   "model": "GRU",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7543614078226012,
+   "seconds": 5.63
+  },
+  {
+   "model": "GRU",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7549501706261963,
+   "seconds": 9.71
+  },
+  {
+   "model": "GRU",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7542467306437,
+   "seconds": 6.2
+  },
+  {
+   "model": "GRU",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7544045991271493,
+   "seconds": 10.57
+  },
+  {
+   "model": "GRU",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7531634011231636,
+   "seconds": 4.08
+  },
+  {
+   "model": "GRU",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7538967355375702,
+   "seconds": 10.5
+  }
+ ],
+ "seconds": 79.9
+}

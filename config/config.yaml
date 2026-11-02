@@ -1,0 +1,15 @@
+# Konfigurasi eksperimen NS-GRU OULAD (lihat desain-eksperimen-neuro-symbolic-oulad.md)
+data_dir: data/raw          # lokasi CSV mentah OULAD
+windows: [2, 4, 6, 8]       # prediction windows (minggu)
+days_per_week: 7            # week = floor(date / days_per_week)
+seed: 42
+
+split:
+  scheme: student                       # "student" (stratified) atau "presentation"
+  ratios: [0.7, 0.15, 0.15]             # train / val / test untuk skema student
+  train_presentations: ["2013B", "2013J"]
+  test_presentations: ["2014B", "2014J"]
+
+label:
+  at_risk: ["Fail", "Withdrawn"]
+  not_at_risk: ["Pass", "Distinction"]

@@ -1,0 +1,328 @@
+{
+ "condition": {
+  "name": "main",
+  "leaky": false,
+  "score_lag_days": 0,
+  "fixed_cohort_weeks": null,
+  "split": "student",
+  "module": null
+ },
+ "window": 2,
+ "seed": 45,
+ "n_train": 19680,
+ "n_val": 4193,
+ "n_test": 4189,
+ "base_rate_test": 0.4554786345189783,
+ "selected": {
+  "xgboost": {
+   "max_depth": 4,
+   "learning_rate": 0.05
+  },
+  "static": {
+   "max_depth": 4,
+   "learning_rate": 0.03
+  },
+  "gru": {
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005
+  },
+  "lstm": {
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001
+  },
+  "transformer": {
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.0005
+  }
+ },
+ "fusion_coef": {
+  "full": {
+   "intercept": -2.5773059575863435,
+   "P_neural": 5.30873124724455,
+   "P_symbolic": -0.021399170463506537,
+   "rule_count": -0.08865652883430358,
+   "high_severity_count": 0.21881285964318897
+  },
+  "compact": {
+   "intercept": -0.02843856189683105,
+   "P_neural": 1.0985592671376496,
+   "P_symbolic": -0.05769555604832882
+  }
+ },
+ "tuning_log": [
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.7227270504444773,
+   "seconds": 1.79
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.7227509816982871,
+   "seconds": 1.16
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.7161071301656046,
+   "seconds": 0.74
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.7225144017915729,
+   "seconds": 0.98
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.7182058879301413,
+   "seconds": 0.97
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 5,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.7098029101317411,
+   "seconds": 1.12
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.721993956491789,
+   "seconds": 2.19
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.7160380344566237,
+   "seconds": 1.35
+  },
+  {
+   "model": "XGBoost",
+   "max_depth": 6,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.703822757128139,
+   "seconds": 1.39
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6230065345545354,
+   "seconds": 0.32
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.6220393139882869,
+   "seconds": 0.35
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 4,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.6165094523036243,
+   "seconds": 0.36
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6229014240078554,
+   "seconds": 0.38
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.6181498371343471,
+   "seconds": 0.43
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.6117292235421341,
+   "seconds": 0.51
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.6200209675407513,
+   "seconds": 0.49
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.6155583133946764,
+   "seconds": 0.43
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 6,
+   "learning_rate": 0.1,
+   "val_pr_auc": 0.6040032325061794,
+   "seconds": 0.5
+  },
+  {
+   "model": "GRU",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7306337860400123,
+   "seconds": 5.06
+  },
+  {
+   "model": "GRU",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7310602779210291,
+   "seconds": 6.44
+  },
+  {
+   "model": "GRU",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7302021280424835,
+   "seconds": 7.46
+  },
+  {
+   "model": "GRU",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.730087160245644,
+   "seconds": 8.66
+  },
+  {
+   "model": "GRU",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7293383787219309,
+   "seconds": 6.22
+  },
+  {
+   "model": "GRU",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7302827114044692,
+   "seconds": 7.74
+  },
+  {
+   "model": "LSTM",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7305848757455842,
+   "seconds": 11.29
+  },
+  {
+   "model": "LSTM",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7306966150413106,
+   "seconds": 12.15
+  },
+  {
+   "model": "LSTM",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7310436063338444,
+   "seconds": 6.49
+  },
+  {
+   "model": "LSTM",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.73100989871476,
+   "seconds": 9.69
+  },
+  {
+   "model": "LSTM",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7299189360940546,
+   "seconds": 4.74
+  },
+  {
+   "model": "LSTM",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.730217063468757,
+   "seconds": 11.37
+  },
+  {
+   "model": "Transformer",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7284308872102961,
+   "seconds": 13.66
+  },
+  {
+   "model": "Transformer",
+   "hidden": 16,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7276679238803243,
+   "seconds": 20.47
+  },
+  {
+   "model": "Transformer",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7313426783867176,
+   "seconds": 13.4
+  },
+  {
+   "model": "Transformer",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.731362246234702,
+   "seconds": 22.21
+  },
+  {
+   "model": "Transformer",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7293855272178267,
+   "seconds": 17.17
+  },
+  {
+   "model": "Transformer",
+   "hidden": 64,
+   "dropout": 0.3,
+   "lr": 0.0005,
+   "val_pr_auc": 0.7288833569460815,
+   "seconds": 24.9
+  }
+ ],
+ "seconds": 247.4
+}

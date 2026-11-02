@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Auditing Temporal Leakage and Rule Reliance in Early Warning of Students at Risk"
+version: 1.0.0
+license: MIT
+type: software
+authors:
+  - given-names: "Agus Alim"
+    family-names: "Muin"
+    affiliation: "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+  - given-names: "M."
+    family-names: "Muflih"
+    affiliation: "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+  - given-names: "Silvia"
+    family-names: "Ratna"
+    affiliation: "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+  - given-names: "Muhammad Edya"
+    family-names: "Rosadi"
+    affiliation: "Faculty of Information Technology, Islamic University of Kalimantan Muhammad Arsyad Al Banjari"
+  - given-names: "Deshinta Arrova"
+    family-names: "Dewi"
+    affiliation: "Faculty of Data Science and Information Technology, INTI International University"
+keywords:
+  - learning analytics
+  - early warning system
+  - data leakage
+  - neurosymbolic AI
+  - OULAD

@@ -1,0 +1,9 @@
+window,mode,attempted,succeeded,failed,immutable_change_rate,mean_features_changed
+2,unconstrained,100,100,0,0.31,1.69
+2,mutable-only,100,100,0,0.0,1.8
+4,unconstrained,100,100,0,0.17,1.92
+4,mutable-only,100,100,0,0.0,1.92
+6,unconstrained,100,100,0,0.28,1.96
+6,mutable-only,100,100,0,0.0,1.94
+8,unconstrained,100,100,0,0.25,1.91
+8,mutable-only,100,100,0,0.0,1.93

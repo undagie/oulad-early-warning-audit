@@ -1,0 +1,71 @@
+{
+ "condition": {
+  "name": "lomo_DDD",
+  "leaky": false,
+  "score_lag_days": 0,
+  "fixed_cohort_weeks": null,
+  "include_withdrawn": false,
+  "split": "lomo",
+  "module": "DDD"
+ },
+ "window": 8,
+ "seed": 43,
+ "n_train": 17761,
+ "n_val": 3126,
+ "n_test": 5046,
+ "base_rate_test": 0.4831549742370194,
+ "selected": {
+  "xgboost": {
+   "max_depth": 4,
+   "learning_rate": 0.05
+  },
+  "static": {
+   "max_depth": 5,
+   "learning_rate": 0.03
+  },
+  "gru": {
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001
+  }
+ },
+ "fusion_coef": {
+  "full": {
+   "intercept": -2.2100363417389812,
+   "P_neural": 4.409334211820465,
+   "P_symbolic": -0.03327878411763472,
+   "rule_count": 0.0657711272611083,
+   "high_severity_count": 0.07040252255116326
+  },
+  "compact": {
+   "intercept": -0.08585343874450846,
+   "P_neural": 1.340058603014901,
+   "P_symbolic": 0.08111328603073222
+  }
+ },
+ "tuning_log": [
+  {
+   "model": "XGBoost",
+   "max_depth": 4,
+   "learning_rate": 0.05,
+   "val_pr_auc": 0.7872540124651468,
+   "seconds": 1.01
+  },
+  {
+   "model": "Static-only",
+   "max_depth": 5,
+   "learning_rate": 0.03,
+   "val_pr_auc": 0.5336352474830294,
+   "seconds": 0.33
+  },
+  {
+   "model": "GRU",
+   "hidden": 32,
+   "dropout": 0.3,
+   "lr": 0.001,
+   "val_pr_auc": 0.7852850697987487,
+   "seconds": 12.4
+  }
+ ],
+ "seconds": 35.9
+}

@@ -1,0 +1,13 @@
+# Exact versions used for the paper (Python 3.11.9, CUDA 12.1 build of PyTorch).
+pandas==2.3.3
+numpy==2.2.6
+PyYAML==6.0.3
+scipy==1.14.1
+scikit-learn==1.5.0
+xgboost==3.2.0
+torch==2.5.1
+pyarrow==21.0.0
+matplotlib==3.10.7
+shap==0.51.0
+dice-ml==0.12
+pytest==8.3.3
